@@ -204,3 +204,8 @@
     width:159px; 
     height:39px;
 }
+
+dialog {
+-webkit-box-sizing: content-box;
+box-sizing: content-box;
+}
