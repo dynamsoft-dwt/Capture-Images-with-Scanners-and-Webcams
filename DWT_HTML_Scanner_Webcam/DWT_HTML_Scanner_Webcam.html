@@ -5,17 +5,80 @@
 	<script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"> </script>
     <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"> </script>
     <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.webcam.js"> </script>
+	<link rel="stylesheet" href="Style/ds.demo.css">
 </head>
 
 <body>
-    <select size="1" id="source" style="position: relative; width: 220px;"></select>
-    <label><input type="checkbox" id="ShowUI">Show User Interface</label>
-    <input type="button" id="acquire" value="Acquire From a Scanner" onclick="CaptureImage();" />
-
-    <!-- dwtcontrolContainer is the default div id for Dynamic Web TWAIN control.
-         If you need to rename the id, you should also change the id in the dynamsoft.webtwain.config.js accordingly. -->
-    <div id="dwtcontrolContainer"></div>
-
+	<div id="header"> 
+		<span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
+		<div class="container">
+			<div id="headerTop" class="row">
+				<div class="ct-lt fl clearfix">
+					<div class="logo mr20 fl"> <img src="Style/Images/logo-dwt-56x56.png" alt="Logo"> </div>
+					<div class="fl">
+						<div class="linkGroup"> <a target="_blank" class="bluelink" href="http://www.dynamsoft.com">Dynamsoft</a><span> / </span> 
+						<a target="_blank" class="bluelink" href="http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx">Dynamic Web TWAIN</a><span> / </span> 
+						<a target="_blank" class="bluelink" href="http://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx">Code Gallery</a></div>
+						<h1>Acquire Images from Scanners and Webcams</h1>
+					</div>
+				</div>
+				<div class="ct-rt fr"><a target="_blank" href="http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx" class="btn lgBtn bgOrange">Download SDK</a> </div>
+			</div>
+			<div id="headerBtm" class="row"> The demo demonstrates how to use Dynamic Web TWAIN to acquire images from scanners or webcams. </div>
+		</div>
+	</div>
+	<!------------------------------------------> 
+	<!--The Key Part of the Sample Starts Here-->
+	<div id="main">
+		<div class="container">
+			<div class="ct-lt clearfix"> 
+				<!-- dwtcontrolContainer is the default div id for Dynamic Web TWAIN control.
+				 If you need to rename the id, you should also change the id in the dynamsoft.webtwain.config.js accordingly. -->
+				<div id="dwtcontrolContainer"></div>
+			</div>
+			<div class="ct-rt">
+				<div class="content clearfix">
+					<div class="section">
+						<select class="w100p" id="source"></select><br /><br />
+						<label><input type="checkbox" id="ShowUI"> Show User Interface</label><br />
+						<input type="button" id="acquire" class="btn  bgBlue mt20" value="Acquire From a Scanner" onclick="CaptureImage();" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--The Key Part of the Sample Ends Here--> 
+	<!---------------------------------------->
+	<div id="footer"> <span onclick="this.parentElement.style.display='none'" class="close">&times;</span>
+		<div class="container">
+			<div id="footerTop" class="row">
+				<div class="item contact"> <strong class="fc4">Contact Us</strong>
+					<ul>
+						<li><a class="graylink" href="mailto:support@dynamsoft.com">support@dynamsoft.com</a></li>
+						<li><a target="_blank" class="graylink" href="http://www.dynamsoft.com/Support/LiveHelp.aspx">Live Chat</a> / <a target="_blank" class="graylink" href="http://www.dynamsoft.com/Support/LiveHelp.aspx">Submit a Form</a></li>
+						<li>1-604-605-5491 (Toll-Free)</li>
+					</ul>
+				</div>
+				<div class="item features"> <strong class="fc4">Features Demonstrated</strong>
+					<ul class="org-li">
+						<li>Scan documents from Scanners</li>
+						<li>Acquire images from Webcams</li>
+					</ul>
+				</div>
+				<div class="item license"> <strong class="fc4">License Required</strong>
+					<ul class="org-li">
+						<li>Core SDK licenses (Windows or Mac or HTML5)</li>
+						<li>Add-on license for Webcam</li>
+						<li><a class="bluelink ds-demo-font-size-14" href="mailto:sales@dynamsoft.com">Contact Dynamsoft Sales</a>&nbsp;<span class="fcBlue"> | </span>&nbsp;<a target="_blank" class="bluelink ds-demo-font-size-14" href="https://www.dynamsoft.com/Secure/WebTWAIN_BuyIt.aspx">Visit Online Store</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="footerBtm" class="row">
+				<div class="ct-lt tc fl">&copy; 2003 - <script>document.write((new Date()).getFullYear());</script> Dynamsoft. All rights reserved. <a href="http://www.dynamsoft.com/PrivacyStatement.aspx">Privacy Statement</a> / <a href="http://www.dynamsoft.com/SiteMap.html">Site Map</a> </div>
+				<div class="ct-rt tr fr"><a href="http://www.dynamsoft.com/">Home</a> / <a href="http://www.dynamsoft.com/Purchase/Purchase.aspx">Purchase</a> / <a href="http://www.dynamsoft.com/Support/Support.aspx">Support</a></div>
+			</div>
+		</div>
+	</div>
     <script type="text/javascript">
         Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady); // Register OnWebTwainReady event. This event fires as soon as Dynamic Web TWAIN is initialized and ready to be used
 
