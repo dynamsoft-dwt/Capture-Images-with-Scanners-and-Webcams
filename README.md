@@ -5,10 +5,10 @@ Dynamsoft Team
 2016-07-07
 
 #### See it in Action
-You can check out how it works on this <a target="_blank" href="http://www.dynamsoft.com/Samples/DWT/Capture-Images-with-Scanners-and-Webcams/DWT_HTML_Scanner_Webcam.html">demo page</a>.
+You can check out how it works on this <a target="_blank" href="http://www.dynamsoft.com/Samples/DWT/Capture-Images-with-Scanners-and-Webcams/Capture-Images-with-Scanners-and-Webcams.html">demo page</a>.
 
 #### Screenshot
-<img alt="DWT_HTML_Scanner_Webcam" src="https://github.com/dynamsoft-dwt/DWT_HTML_Scanner_Webcam/blob/master/DWT_HTML_Scanner_Webcam.png" width="250"/>
+<img alt="Capture-Images-with-Scanners-and-Webcams" src="https://github.com/dynamsoft-dwt/Capture-Images-with-Scanners-and-Webcams/blob/master/Capture-Images-with-Scanners-and-Webcams.png" width="250"/>
 
 #### Complete Sample
 In order to test the sample on your own, you need to download the complete code from [here](http://www.dynamsoft.com/Samples/DWT/Capture-Images-with-Scanners-and-Webcams.zip).
