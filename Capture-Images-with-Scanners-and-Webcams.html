@@ -89,7 +89,7 @@
 			strHTTPServer = location.hostname;
 			var CurrentPathName = unescape(location.pathname);
 			CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);  
-			var webcamResourcePath = CurrentPath + "\\Resources\\addon\\Webcam.zip";
+			var webcamResourcePath = location.protocol + '//' + location.hostname + ':' + location.port + CurrentPath + "Resources/addon/Webcam.zip";
             DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
             if (DWObject) {
 				DWObject.Addon.Webcam.Download(webcamResourcePath, function(){		
