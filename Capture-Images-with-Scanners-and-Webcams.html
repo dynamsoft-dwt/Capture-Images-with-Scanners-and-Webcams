@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Use Dynamic Web TWAIN to capture image from Webcam</title>
-	<script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"> </script>
-    <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"> </script>
-    <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.webcam.js"> </script>
+	<script type="text/javascript" src="https://www.dynamsoft.com/Demo/DWT/Resources/dynamsoft.webtwain.initiate.js?t=150418"> </script>
+    <script type="text/javascript" src="https://www.dynamsoft.com/Demo/DWT/Resources/dynamsoft.webtwain.config.js"> </script>
+    <script type="text/javascript" src="https://www.dynamsoft.com/Demo/DWT/Resources/addon/dynamsoft.webtwain.addon.webcam.js"> </script>
 	<link rel="stylesheet" href="Style/ds.demo.css">
 </head>
 
@@ -83,15 +83,14 @@
         Dynamsoft.WebTwainEnv.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady); // Register OnWebTwainReady event. This event fires as soon as Dynamic Web TWAIN is initialized and ready to be used
 
 		var webCamStartingIndex;//This is used to separate scanners and webcams
-		var DWObject, CurrentPath, strHTTPServer;
+		var DWObject;
 
-        function Dynamsoft_OnReady() {
-			strHTTPServer = location.hostname;
-			var CurrentPathName = unescape(location.pathname);
-			CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);  
-			var webcamResourcePath = location.protocol + '//' + location.hostname + ':' + location.port + CurrentPath + "Resources/addon/Webcam.zip";
+        function Dynamsoft_OnReady() {			
+			var webcamResourcePath = Dynamsoft.WebTwainEnv.ResourcesPath + "/addon/Webcam.zip";
             DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
             if (DWObject) {
+				DWObject.Width = 506;
+				DWObject.Height = 600;
 				DWObject.Addon.Webcam.Download(webcamResourcePath, function(){		
 					document.getElementById('source').options.length = 0;
 					var count = DWObject.SourceCount;
