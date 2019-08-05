@@ -15,7 +15,7 @@ You can check out how it works on this <a target="_blank" href="http://www.dynam
 In order to test the sample on your own, you need to download the complete code from [here](http://www.dynamsoft.com/Samples/DWT/Capture-Images-with-Scanners-and-Webcams.zip).
 
 #### Reference
-* Core Software used: [Dynamic Web TWAIN](https://www.dynamsoft.com/CustomerPortal/LoginOrRegister.aspx?status=signup&op=4DD608F3803493E4&product=CB4BDC4FF903450C)
+* Core Software used: [Dynamic Web TWAIN](http://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 * APIs used in the sample: [Dynamic Web TWAIN APIs](https://www.dynamsoft.com/docs/dwt/API/API-Index.html).
 
 Should you need any technical help, please write to 
